@@ -1,0 +1,342 @@
+{
+  "CVars": {
+    "gCosmetic": {
+      "Buttons": {
+        "A": {
+          "Changed": 1,
+          "Color": {
+            "A": 255,
+            "B": 150,
+            "G": 140,
+            "R": 120,
+            "Type": "RGBA"
+          }
+        },
+        "B": {
+          "Changed": 1,
+          "Color": {
+            "A": 255,
+            "B": 115,
+            "G": 140,
+            "R": 120,
+            "Type": "RGBA"
+          }
+        },
+        "CDown": {
+          "Changed": 1,
+          "Color": {
+            "A": 255,
+            "B": 100,
+            "G": 160,
+            "R": 175,
+            "Type": "RGBA"
+          }
+        },
+        "CLeft": {
+          "Changed": 1,
+          "Color": {
+            "A": 255,
+            "B": 100,
+            "G": 160,
+            "R": 175,
+            "Type": "RGBA"
+          }
+        },
+        "CRight": {
+          "Changed": 1,
+          "Color": {
+            "A": 255,
+            "B": 100,
+            "G": 160,
+            "R": 175,
+            "Type": "RGBA"
+          }
+        },
+        "DPad": {
+          "Changed": 1,
+          "Color": {
+            "A": 255,
+            "B": 180,
+            "G": 180,
+            "R": 180,
+            "Type": "RGBA"
+          }
+        },
+        "Start": {
+          "Changed": 1,
+          "Color": {
+            "A": 255,
+            "B": 85,
+            "G": 110,
+            "R": 150,
+            "Type": "RGBA"
+          }
+        }
+      },
+      "HUD": {
+        "Hearts": {
+          "Changed": 1,
+          "Color": {
+            "A": 255,
+            "B": 50,
+            "G": 55,
+            "R": 165,
+            "Type": "RGBA"
+          }
+        },
+        "Magic": {
+          "Changed": 1,
+          "Color": {
+            "A": 255,
+            "B": 80,
+            "G": 125,
+            "R": 70,
+            "Type": "RGBA"
+          }
+        },
+        "Minimap": {
+          "Changed": 1,
+          "Color": {
+            "A": 140,
+            "B": 150,
+            "G": 150,
+            "R": 120,
+            "Type": "RGBA"
+          }
+        },
+        "RupeeIcon": {
+          "Changed": 1,
+          "Color": {
+            "A": 255,
+            "B": 100,
+            "G": 150,
+            "R": 130,
+            "Type": "RGBA"
+          }
+        }
+      }
+    },
+    "gEnhancements": {
+      "Camera": {
+        "FirstPerson": {
+          "RightStickEnabled": 1
+        },
+        "FreeLook": {
+          "Enable": 1
+        },
+        "RightStick": {
+          "InvertYAxis": 0
+        }
+      },
+      "Cutscenes": {
+        "SkipEntranceCutscenes": 1,
+        "SkipIntroSequence": 1,
+        "SkipOnePointCutscenes": 1,
+        "SkipStoryCutscenes": 1
+      },
+      "Dialogue": {
+        "FastText": 1
+      },
+      "Graphics": {
+        "3DItemDrops": 1,
+        "AO": {
+          "Enabled": 1
+        },
+        "ActorCullingAccountsForWidescreen": 1,
+        "DarkAtmosphere": {
+          "Darkness": 0,
+          "Enabled": 1
+        },
+        "EnemyHealthBars": 1,
+        "FixSceneGeometrySeams": 1,
+        "IncreaseActorDrawDistance": 2,
+        "Post": {},
+        "Relief": {
+          "Strength": 50,
+          "SunX": -0.28346458077430725,
+          "SunY": -0.8976377844810486,
+          "SunZ": -0.14960630238056183
+        },
+        "SmoothModels": {
+          "Level": 4,
+          "SmoothNormals": 1
+        }
+      },
+      "Mods": {
+        "AlternateAssets": 1
+      },
+      "Saving": {
+        "Autosave": 1,
+        "PauseSave": 1
+      }
+    },
+    "gHudEditor": {
+      "A": {
+        "Mode": 4,
+        "Position": {
+          "X": 234,
+          "Y": 14
+        },
+        "Scale": 0.6499999761581421
+      },
+      "B": {
+        "Mode": 4,
+        "Position": {
+          "X": 218,
+          "Y": 13
+        },
+        "Scale": 0.6499999761581421
+      },
+      "CDown": {
+        "Mode": 4,
+        "Position": {
+          "X": 272,
+          "Y": 24
+        },
+        "Scale": 0.6499999761581421
+      },
+      "CLeft": {
+        "Mode": 4,
+        "Position": {
+          "X": 257,
+          "Y": 14
+        },
+        "Scale": 0.6499999761581421
+      },
+      "CRight": {
+        "Mode": 4,
+        "Position": {
+          "X": 286,
+          "Y": 14
+        },
+        "Scale": 0.6499999761581421
+      },
+      "CUp": {
+        "Mode": 4,
+        "Position": {
+          "X": 275,
+          "Y": 12
+        },
+        "Scale": 0.6499999761581421
+      },
+      "Carrots": {
+        "Mode": 2,
+        "Position": {
+          "X": 160,
+          "Y": 50
+        },
+        "Scale": 0.75
+      },
+      "Clock": {
+        "Mode": 2,
+        "Position": {
+          "X": 160,
+          "Y": 217
+        },
+        "Scale": 0.6499999761581421
+      },
+      "DPad": {
+        "Mode": 4,
+        "Position": {
+          "X": 286,
+          "Y": 38
+        },
+        "Scale": 0.6499999761581421
+      },
+      "Hearts": {
+        "Mode": 3,
+        "Position": {
+          "X": 24,
+          "Y": 21
+        },
+        "Scale": 0.75
+      },
+      "Keys": {
+        "Mode": 3,
+        "Position": {
+          "X": 20,
+          "Y": 204
+        },
+        "Scale": 0.699999988079071
+      },
+      "Magic": {
+        "Mode": 3,
+        "Position": {
+          "X": 15,
+          "Y": 27
+        },
+        "Scale": 0.75
+      },
+      "Minigames": {
+        "Mode": 3,
+        "Position": {
+          "X": 16,
+          "Y": 52
+        },
+        "Scale": 0.75
+      },
+      "Minimap": {
+        "Mode": 4,
+        "Position": {
+          "X": 300,
+          "Y": 224
+        },
+        "Scale": 0.75
+      },
+      "Rupees": {
+        "Mode": 3,
+        "Position": {
+          "X": 20,
+          "Y": 215
+        },
+        "Scale": 0.699999988079071
+      },
+      "SkullKidTimer": {
+        "Mode": 2,
+        "Position": {
+          "X": 131,
+          "Y": 213
+        },
+        "Scale": 0.6499999761581421
+      },
+      "Skulltulas": {
+        "Mode": 3,
+        "Position": {
+          "X": 20,
+          "Y": 204
+        },
+        "Scale": 0.699999988079071
+      },
+      "Start": {
+        "Mode": 4,
+        "Position": {
+          "X": 198,
+          "Y": 13
+        },
+        "Scale": 0.6499999761581421
+      },
+      "Timers": {
+        "Mode": 3,
+        "Position": {
+          "X": 21,
+          "Y": 36
+        },
+        "Scale": 0.75
+      }
+    },
+    "gInterpolationFPS": 60,
+    "gMatchRefreshRate": 1,
+    "gSettings": {
+      "InternalResolution": 1.0,
+      "MSAAValue": 4,
+      "TextureFilter": 1,
+      "VsyncEnabled": 1
+    }
+  },
+  "Window": {
+    "Backend": {
+      "Id": 1,
+      "Name": "DirectX 11"
+    }
+  }
+}

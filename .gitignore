@@ -1,0 +1,33 @@
+# Game files and generated assets: never commit (copyright / size)
+*.z64
+*.n64
+*.v64
+*.o2r
+*.otr
+*.zip
+*.7z
+*.rar
+mm.o2r
+saves/
+mods/
+previews/
+
+# Build output
+engine/build/
+engine/x64/
+build/
+x64/
+engine/mm/src/boot/build.c
+engine/mm/windows/properties.h
+*.pdb
+*.exe
+*.obj
+*.lib
+
+# Python / editors
+__pycache__/
+*.pyc
+.vs/
+.vscode/
+.idea/
+*.log
