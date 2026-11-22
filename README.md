@@ -48,6 +48,9 @@ cmake --build engine/build/x64 --config Release
 Salida: `engine\x64\Release\2ship.exe` y `engine\build\x64\mm\2ship.o2r`. La primera compilación tarda de 10 a 30
 minutos.
 
+La primera configuración descarga dependencias con vcpkg. Si termina con `Configuring incomplete, errors occurred`,
+vuelve a ejecutar el primer comando: la segunda vez suele completarse.
+
 ### 3. Instalar en la carpeta del juego
 
 ```powershell
