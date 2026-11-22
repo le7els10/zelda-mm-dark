@@ -12,7 +12,7 @@ Versión más realista y oscura, casi de terror, de *The Legend of Zelda: Majora
 El estado de cada parte está en [PLAN.md](PLAN.md).
 
 > **Este repositorio no contiene la ROM ni ningún asset de Nintendo**, ni los packs de texturas generados (~35 GB).
-> Cada persona usa su propia copia del juego. Los packs DarkMM se comparten aparte (ver [Mods](#4-mods)).
+> Cada persona usa su propia copia del juego. Los packs DarkMM se comparten por Drive (ver [Mods](#4-mods)).
 
 ---
 
@@ -66,20 +66,39 @@ verificar la ROM en <https://2ship.equipment/>.
 
 ### 4. Mods
 
-Todos van en `<carpeta del juego>\mods\`. Los nombres de archivo deben coincidir con la tabla, porque el orden de
-carga se configura por nombre.
+Todos van en `<carpeta del juego>\mods\`, con los nombres de la tabla: el orden de carga se configura por nombre.
+Espacio necesario: unos 75 GB, más 40 GB temporales mientras se descomprime MM Reloaded.
 
-| Archivo(s) en `mods\` | De dónde sale |
-| --- | --- |
-| `DialogosPAL.o2r`, `TexPal.o2r` | [Traducción Español (PAL)](https://gamebanana.com/mods/678108) (opcional, juego en español) |
-| `MM_Reloaded_v11.0.3_4K.o2r` | [MM Reloaded](https://gamebanana.com/mods/555331), versión 4K v11.0.3 (las descargas están enlazadas en su página / GitHub de GhostlyDark) |
-| `3DS_Link_1_Models.o2r`, `3DS_Link_2_Textures.o2r`, `3DS_Equipment_1_Models.o2r`, `3DS_Equipment_2_Textures.o2r` | [3DS Link](https://gamebanana.com/mods/644553) (archivos *standard* y *equipment*) |
-| `3DS_Expressive_Human.o2r`, `3DS_Expressive_Goron.o2r`, `3DS_Expressive_Zora.o2r`, `3DS_Expressive_FierceDeity.o2r` | [Expressive Link for 3DS Link](https://gamebanana.com/mods/646581) (*the expressive 3ds link collection*) |
-| `1-HD Moon.otr`, `2-HD Moon Textures.otr` | [HD Moon](https://gamebanana.com/mods/640438) |
-| `DarkMM.o2r`, `DarkMM_Scenes_AI.o2r`, `DarkMM_Objects.o2r`, `DarkMM_NPC_AI.o2r`, `DarkMM_Items_AI.o2r`, `DarkMM_Moon.o2r`, `DarkMM_Sky.o2r`, `DarkMM_SkullKid.o2r`, `DarkMM_Link3DS.o2r` | **[humano]** Los comparte el dueño del proyecto aparte (Drive o disco). Pídeselos a la persona. Se pueden regenerar con `tools\` (ver [Generar texturas](#generar-texturas)), pero tarda días. |
+**a) Mods de la comunidad (automático).** El script los descarga, extrae solo los archivos necesarios, les pone el
+nombre correcto y comprueba que son las mismas versiones con las que se hizo DarkMM:
 
-Los mods de GameBanana se descargan desde su página. Si un agente no puede descargarlos, pídeselo a la persona e
-indícale los enlaces. Descomprime cada `.zip` y copia solo los `.o2r` / `.otr` indicados.
+```powershell
+winget install --id 7zip.7zip -e
+python tools\download_mods.py --game-dir "C:\Games\zelda-mm-dark"
+```
+
+Descarga unos 6,4 GB (casi todo es MM Reloaded) y se puede volver a ejecutar si se corta: salta lo que ya está.
+`--skip reloaded` omite MM Reloaded.
+
+**b) Packs DarkMM (manual).** **[humano]** Descarga la carpeta completa del Drive del proyecto:
+**DARKMM_DRIVE_URL** (el dueño del proyecto la comparte aparte; si aquí aún pone `DARKMM_DRIVE_URL`, pídele el
+enlace). Después cópialos con:
+
+```powershell
+python tools\download_mods.py --game-dir "C:\Games\zelda-mm-dark" --darkmm-dir "<carpeta descargada del Drive>"
+```
+
+| Archivo(s) en `mods\` | Fuente | Descarga directa |
+| --- | --- | --- |
+| `DialogosPAL.o2r`, `TexPal.o2r` | [Traducción Español (PAL)](https://gamebanana.com/mods/678108) | <https://gamebanana.com/dl/1704610> |
+| `MM_Reloaded_v11.0.3_4K.o2r` (en el 7z se llama distinto; renómbralo) | [MM Reloaded](https://github.com/GhostlyDark/MM-Reloaded/releases/tag/v11.0.2), *2ship o2r 4k* v11.0.3 | [parte 1](https://github.com/GhostlyDark/MM-Reloaded/releases/download/v11.0.2/mm-reloaded-v11.0.3-2ship-o2r-4k.7z.001), [parte 2](https://github.com/GhostlyDark/MM-Reloaded/releases/download/v11.0.2/mm-reloaded-v11.0.3-2ship-o2r-4k.7z.002), [parte 3](https://github.com/GhostlyDark/MM-Reloaded/releases/download/v11.0.2/mm-reloaded-v11.0.3-2ship-o2r-4k.7z.003) |
+| `3DS_Link_1_Models.o2r` ← `1- 3DS Link.o2r`, `3DS_Link_2_Textures.o2r` ← `2-3DS Link Textures.o2r` | [3DS Link](https://gamebanana.com/mods/644553), *standard* | <https://gamebanana.com/dl/1788174> |
+| `3DS_Equipment_1_Models.o2r` ← `1-3DS Equipment.o2r`, `3DS_Equipment_2_Textures.o2r` ← `2-3DS Equipment Textures.o2r` | [3DS Link](https://gamebanana.com/mods/644553), *equipment* | <https://gamebanana.com/dl/1630255> |
+| `3DS_Expressive_Human/Goron/Zora/FierceDeity.o2r` ← `Expressive Human/Goron/Zora/Fierce Deity Link .o2r` | [Expressive Link for 3DS Link](https://gamebanana.com/mods/646581), *collection* | <https://gamebanana.com/dl/1815712> |
+| `1-HD Moon.otr`, `2-HD Moon Textures.otr` | [HD Moon](https://gamebanana.com/mods/640438) | <https://gamebanana.com/dl/1583670> |
+| `DarkMM.o2r`, `DarkMM_Scenes_AI.o2r`, `DarkMM_Objects.o2r`, `DarkMM_NPC_AI.o2r`, `DarkMM_Items_AI.o2r`, `DarkMM_Moon.o2r`, `DarkMM_Sky.o2r`, `DarkMM_SkullKid.o2r`, `DarkMM_Link3DS.o2r` | Drive del proyecto | **DARKMM_DRIVE_URL** |
+
+Los packs DarkMM se pueden regenerar con `tools\` (ver [Generar texturas](#generar-texturas)), pero tarda días.
 
 ### 5. Configurar
 

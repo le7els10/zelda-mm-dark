@@ -8,8 +8,8 @@ Proyecto: Majora's Mask oscuro y realista sobre 2Ship2Harkinian. Para instalar e
 - **Nunca** subas a git la ROM (`*.z64`, `*.n64`, `*.v64`), `mm.o2r`, `2ship.o2r`, ningún `*.o2r`, `*.otr` o `*.zip`,
   ni texturas o capturas sacadas del juego. Son assets con copyright o archivos de varios GB. El `.gitignore` los
   excluye; no lo saltes con `git add -f`.
-- No descargues mods ni la ROM por tu cuenta si la persona no te lo pidió: dale los enlaces del README. La ROM
-  siempre la aporta la persona.
+- Los mods de la comunidad se descargan con `tools/download_mods.py` (enlaces directos en el README). La ROM y los
+  packs DarkMM (Drive del proyecto) los aporta la persona: nunca busques la ROM en internet.
 - El juego reescribe `2ship2harkinian.json` al cerrarse, y Windows bloquea `2ship.exe` y los `.o2r` mientras el juego
   está abierto. Antes de tocar la carpeta del juego, comprueba que el juego está cerrado
   (`Get-Process 2ship -ErrorAction SilentlyContinue`) y, si está abierto, pide a la persona que lo cierre.
